@@ -1,0 +1,17 @@
+/proc/ioports - serial ports
+
+sudo grep -i "serial" /proc/ioports > ex1.txt
+
+dma1 - direct memory access controllerr 1
+(allows to transfer data directly to and from
+system RAM without tying up the CPU for every byte)
+
+pic1 - programmable interrupt controller 1
+(manages hardware interrupt requests from peripheral devices,
+like keyboard or timer. and prioritize which signals get sent
+to the CPU)
+
+timer1 - programmable interval timer
+(generates periodic clock ticks (interrupts) and set intervals.
+the system uses these ticks to keep track of time, schedule processes
+and manage multitasking)

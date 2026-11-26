@@ -1,0 +1,38 @@
+ls -l . | grep ^d | wc -l
+
+inode - index node - stores metadate
+stat main.c
+
+linking
+file and hardlink has the same inodes
+
+ln -s hardlink.txt softlink.txt
+different inodes
+
+ls -i 
+inode file
+stat path -> get metadata
+
+hardlink - new name for the same inode (ln)
+softlink - contains a path to another file (ln -s)
+           or directory and may point to any of them
+to get inode number
+ls -i
+stat -c "%i" 
+
+
+user/owner group others
+rwx rwx rwx
+chmod u=rwx filename
+u / g / o / a
+
+inotify API - tool to monitor filesystem changes
+inotify_init()
+inotify_add_watch()
+inotify_rm_watch()
+sys/inotify.h
+The buffer size for read system call should be at least
+sizeof(struct inotify_event) + NAME_MAX + 1 for
+reading one event.
+
+
